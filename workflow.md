@@ -28,6 +28,8 @@ But we like the hard way
 
 `cmd | grep <term>`        <-- use pipe to chain commands (cool!)
 
+`ps -ef | grep aaronr`     <-- my user processes
+
 `ps | grep vi`         <-- find our VI process
 
 get too many... need to exclude the word "grep"
@@ -105,6 +107,8 @@ diff works on dirs as well as files
 
 `diff dir1 dir2`   <-- Show dir and file diffs
 
+`diff -rq dir1 dir2`   <-- Show dir only, but recursive
+
 FOR LOOP
 
 `for i in {1..5}; do COMMAND-HERE; done`
@@ -114,7 +118,7 @@ FOR LOOP
 
 basename is cool...
 
-`for f in *.json; do echo ogr2ogr $(basename $f .json).shp $f; done`
+`for f in *.json; do echo ogr2ogr $(basename $f .json)_new.shp $f; done`
 
 SSH AGENT
 
