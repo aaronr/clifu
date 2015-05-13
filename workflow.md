@@ -1,5 +1,7 @@
 Since we are stuck in VI... we need to learn a few things
-(:q if you want the easy way out)
+
+( :q if you want the easy way out )
+
 But we like the hard way
 
 `C-z`     <-- suspend your current process
