@@ -114,7 +114,7 @@ FOR LOOP
 
 basename is cool...
 
-`for f in *.json; do echo ogr2ogr $f $(basename $f .json).shp; done`
+`for f in *.json; do echo ogr2ogr $(basename $f .json).shp $f; done`
 
 SSH AGENT
 
