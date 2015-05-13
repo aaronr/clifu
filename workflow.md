@@ -151,6 +151,30 @@ LOCAL SERVER
 
 Lets look at some gdal/ogr command line fu
 
+BASIC OGR/GDAL
+
+`ogr2ogr --help`  <-- All commands have a help!
+
+`ogr<tab><tab>`   <-- All ogr commands start with ogr... use tab to search
+
+All of this applies to GDAL as well
+
+INFO GATHERING
+
+`ogrinfo -al us_germany.shp  | more` <-- pipe output so you can see results
+
+`gdalinfo my.tiff | more`            <-- pipe to see it all
+
+REPROJECT
+
+`ogr2ogr -t_srs EPSG:3857 us_germany_3857.shp us_germany.shp`
+
+`gdalwarp -t_srs EPSG:3857 c41078a1.tif c41078a1_3857.tif`
+
+TRANSLATE
+
+`ogr2ogr -f GeoJSON us_germany.json us_germany.shp`
+
 VSI is an interesting feature... great for pipe |
 
 `ogr2ogr -f GeoJSON /vsistdout/ us_germany.shp`
@@ -159,7 +183,7 @@ tough to read... lets clean it up with python -m json.tool
 
 `ogr2ogr -f GeoJSON /vsistdout/ us_germany.shp | python -m json.tool`
 
-How about filter some stuff
+FILTER
 
 `ogr2ogr -f GeoJSON /vsistdout/ us_germany.shp -where "name = 'Germany'" | python -m json.tool`
 
@@ -170,6 +194,8 @@ Or with more sql to filter attributes
 You can use it to download from the web as well with vsicurl
 
 `ogr2ogr -f GeoJSON /vsistdout/ /vsizip/vsicurl/http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip/ne_110m_admin_0_countries.shp -sql "select economy from ne_110m_admin_0_countries where name='Germany'" | python -m json.tool`
+
+VIRTUAL FILES
 
 How about a building a VRT (virtual file)
 
