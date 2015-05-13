@@ -129,6 +129,8 @@ SSH AGENT
 `ssh -A user@server.com`  <-- Log into server and have 
                             your priv key available!
 
+use `ssh -T git@github.com` to verify
+
 SCREEN - Keep your session alive if connection drops
 
 `screen`  <-- Does not get much simpler than that
