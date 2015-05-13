@@ -3,32 +3,38 @@ Since we are stuck in VI... we need to learn a few things
 But we like the hard way
 
 `C-z`     <-- suspend your current process
+
 `fg`      <-- bring suspended process into forground
 
-C-a     <-- beginning of line
-C-e     <-- end of line
+`C-a`     <-- beginning of line
 
-ps      <-- list your processes
-ps -ef  <-- list them all
+`C-e`     <-- end of line
 
-grep <term> <files>      <-- find something in file
-grep -i <term> <files>   <-- case insensitive
-grep -in <term> <files>  <-- add line numbers
-cmd | grep <term>        <-- use pipe to chain commands (cool!)
+`ps`      <-- list your processes
 
-ps | grep vi         <-- find our VI process
+`ps -ef`  <-- list them all
+
+`grep <term> <files>`      <-- find something in file
+
+`grep -i <term> <files>`   <-- case insensitive
+
+`grep -in <term> <files>`  <-- add line numbers
+
+`cmd | grep <term>`        <-- use pipe to chain commands (cool!)
+
+`ps | grep vi`         <-- find our VI process
 
 get too many... need to exclude the word "grep"
 
-ps | grep -v "grep" | grep vi  <-- Now we have our process!
+`ps | grep -v "grep" | grep vi`  <-- Now we have our process!
 
-ps | grep -v "grep" | grep vi | awk '{ print $1 }'   <-- Get just the ID
+`ps | grep -v "grep" | grep vi | awk '{ print $1 }'`   <-- Get just the ID
  
-`` <-- Execute inline
+``` `` ``` <-- Execute inline
 
 Kill the process... show no mercy :-)
 
-kill -9 `ps | grep -v "grep" | grep vi | awk '{ print $1 }'`
+``kill -9 `ps | grep -v "grep" | grep vi | awk '{ print $1 }'```
 
 Open in real editor
 
