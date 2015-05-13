@@ -53,13 +53,16 @@ GET OUT OF CURRENT PROCESS
 
 TAB TAB TAB
 
-<tab> to complete files/dirs/cmds
-double<tab> to see completions
+`<tab>` to complete files/dirs/cmds
+
+`double<tab>` to see completions
 
 PIPE|REDIRECT|APPEND
 
 `|`   <-- pipe stdout to next command
+
 `>`   <-- redirect stdout to new file (overwrite if exists)
+
 `>>`  <-- redirect stdout to new file (append if exists)
 
 `ls > my_directory_listing.txt`
