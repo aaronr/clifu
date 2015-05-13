@@ -22,6 +22,10 @@ But we like the hard way
 
 `grep -in <term> <files>`  <-- add line numbers
 
+`grep -r <term> <dir>`     <-- recursive in a directory
+
+`find . -name "*.html" -exec grep -in <term> {} \;`  <-- more powerful recursive grep
+
 `cmd | grep <term>`        <-- use pipe to chain commands (cool!)
 
 `ps | grep vi`         <-- find our VI process
