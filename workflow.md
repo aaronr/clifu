@@ -2,8 +2,8 @@ Since we are stuck in VI... we need to learn a few things
 (:q if you want the easy way out)
 But we like the hard way
 
-C-z     <-- suspend your current process
-fg      <-- bring suspended process into forground
+`C-z`     <-- suspend your current process
+`fg`      <-- bring suspended process into forground
 
 C-a     <-- beginning of line
 C-e     <-- end of line
